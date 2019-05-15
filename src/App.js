@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { observer } from 'mobx-react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+@observer
+class App extends React.Component {
+
+  state = {
+    counters: [
+      { id: 1, value: 4 },
+      { id: 2, value: 0 },
+      { id: 3, value: 0 },
+      { id: 4, value: 0 }
+    ]
+  };
+
+  constructor() {
+    super();
+    console.log("App - Constructure");
+  }
+
+  render(){
+    return(
+      <React.Fragment>
+        <div>ggg</div>
+      </React.Fragment>
+    )
+  }
+
 }
 
 export default App;
